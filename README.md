@@ -32,4 +32,27 @@ Dự án sử dụng:
 để sau
 
 ## 6. Lệnh chạy chương trình
+1. Khởi động phần mềm **SOFA GUI** (hoặc gõ `runSofa` trong cửa sổ cmd).
+2. Trên thanh menu, chọn **File** $\rightarrow$ **Open Simulation**.
+3. Tìm và chọn file: Finger.py (hoặc Finger nếu máy không hiển thị đuôi file
+4. Nhấn nút **Animate** (biểu tượng hình tam giác ở phía trên chính giữa màn hình) để bắt đầu tính toán mô phỏng.
+   
+<p align="center">
+  <img width="800" alt="Ảnh 1" src="https://github.com/user-attachments/assets/8fadba13-4d43-4fc1-92c9-ab5e887f7654" />
+  <br>
+  <em>Hình 1: Mô hình hình học và chia lưới phần tử hữu hạn (FEM)</em>
+</p>
+
+<p align="center">
+  <img width="800" alt="Ảnh 2" src="https://github.com/user-attachments/assets/d81e5f6a-7111-44db-a671-db92cd41c209" />
+  <br>
+  <em>Hình 2: Thiết lập dây cáp và vùng cố định (BoxROI) trong SOFA</em>
+</p>
+
+<p align="center">
+  <img width="800" alt="Ảnh 3" src="https://github.com/user-attachments/assets/232a8f44-b44b-46e6-92d7-f9242558a5f5" />
+  <br>
+  <em>Hình 3: Kết quả mô phỏng biến dạng ngón tay khi kéo dây</em>
+</p>
+
 
