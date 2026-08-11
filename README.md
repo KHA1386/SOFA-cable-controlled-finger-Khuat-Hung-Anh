@@ -29,6 +29,7 @@ Dự án sử dụng:
 
 ## 5. Hướng dẫn cài đặt
 1. **Clone repository về máy:**
-   ```bash
-   git clone [https://github.com/KHA1386/SOFA-cable-controlled-finger-Khuat-Hung-Anh.git](https://github.com/KHA1386/SOFA-cable-controlled-finger-Khuat-Hung-Anh.git)
-   cd SOFA-cable-controlled-finger-Khuat-Hung-Anh
+để sau
+
+## 6. Lệnh chạy chương trình
+
