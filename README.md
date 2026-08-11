@@ -40,19 +40,19 @@ Dự án sử dụng:
 <p align="center">
   <img width="800" alt="Ảnh 1" src="https://github.com/user-attachments/assets/8fadba13-4d43-4fc1-92c9-ab5e887f7654" />
   <br>
-  <em>Hình 1: Mô hình hình học và chia lưới phần tử hữu hạn (FEM)</em>
+  <em>Hình 1: Cách khởi động phần mềm qua file (có thể tạo shortcut trên desktop)</em>
 </p>
 
 <p align="center">
   <img width="800" alt="Ảnh 2" src="https://github.com/user-attachments/assets/d81e5f6a-7111-44db-a671-db92cd41c209" />
   <br>
-  <em>Hình 2: Thiết lập dây cáp và vùng cố định (BoxROI) trong SOFA</em>
+  <em>Hình 2: Khởi động phần mềm qua cửa sổ cmd</em>
 </p>
 
 <p align="center">
   <img width="800" alt="Ảnh 3" src="https://github.com/user-attachments/assets/232a8f44-b44b-46e6-92d7-f9242558a5f5" />
   <br>
-  <em>Hình 3: Kết quả mô phỏng biến dạng ngón tay khi kéo dây</em>
+  <em>Hình 3: Cách chạy chương trình</em>
 </p>
 
 
