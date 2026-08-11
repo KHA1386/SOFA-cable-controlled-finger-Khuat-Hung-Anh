@@ -1,2 +1,2 @@
-# SOFA---Finger-i-u-khi-n-b-ng-Cable---Khuat-Hung-Anh
+# SOFA-cable-controlled finger-Khuat-Hung-Anh
 để sau
