@@ -42,13 +42,13 @@ Dự án sử dụng:
   <br>
   <em>Hình 1: Cách khởi động phần mềm qua file (có thể tạo shortcut trên desktop)</em>
 </p>
-
+<br><br>
 <p align="center">
   <img width="800" alt="Ảnh 2" src="https://github.com/user-attachments/assets/d81e5f6a-7111-44db-a671-db92cd41c209" />
   <br>
   <em>Hình 2: Khởi động phần mềm qua cửa sổ cmd</em>
 </p>
-
+<br><br>
 <p align="center">
   <img width="800" alt="Ảnh 3" src="https://github.com/user-attachments/assets/232a8f44-b44b-46e6-92d7-f9242558a5f5" />
   <br>
