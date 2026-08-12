@@ -12,9 +12,10 @@ Dự án sử dụng:
 - **SoftRobots Plugin**: Plugin mở rộng cho SOFA hỗ trợ mô phỏng các cấu trúc robot mềm và các bộ truyền động
   
   
-## 3. Hình ảnh hoặc video kết quả
+## 3. Hình ảnh và video kết quả
 <img width="1904" height="1062" alt="image" src="https://github.com/user-attachments/assets/dec1e5d0-7452-496d-81d1-971acd12181e" />
 
+https://github.com/user-attachments/assets/aed9fb82-fb4a-4477-a6bd-912dc0b73435
 
 ## 4. Phiên bản phần mềm và thư viện
 - **Python**: 3.12.1
@@ -84,7 +85,7 @@ Dự án được tổ chức bao gồm các file cấu hình kịch bản mô p
 
 - Tính toán và cập nhật giá trị độ co dãn của cáp (value) theo hàm sóng Sin biến thiên êm dịu.
 
-### mesh:
+### mesh: (đã có sẵn khi tải SOFA)
 - Lưu trữ các định dạng file hình học 3D phục vụ tính toán phần tử hữu hạn (.vtk) và hiển thị đồ họa (.stl).
 
 ## 8. Flowchart mô phỏng
