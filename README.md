@@ -91,14 +91,12 @@ Dự án được tổ chức bao gồm các file cấu hình kịch bản mô p
 
 ```mermaid
 flowchart TD
-    A([Bắt đầu mô phỏng]) --> B[Khởi tạo RootNode & Load các Plugin SOFA]
-    B --> C[Thiết lập trọng lực g và bước thời gian dt]
-    C --> D[Tạo Node 'finger': Load file .vtk, gán vật liệu FEM & Cố định gốc BoxROI]
-    D --> E[Tạo Node 'cable': Khai báo tọa độ cáp, gán CableConstraint & BarycentricMapping]
-    E --> F[Gắn FingerControllerTime vào nút cáp]
-    F --> G[Bộ xử lý Controller tính độ kéo cáp theo hàm Sin & SOFA Solver tính biến dạng, cập nhật 3D]
-    G --> H([Kết thúc bước / Lặp lại])
-    H --> G
+    A["1. Khai báo mô hình (Mesh .vtk, MechanicalObject)"] --> B["2. Khai báo vật liệu & tham số (FEM Elastic, Mass, g, dt)"]
+    B --> C["3. Thiết lập điều kiện biên (BoxROI, RestShapeSprings)"]
+    C --> D["4. Khai báo Actuation & tải ngoài (CableConstraint, Controller Sin)"]
+    D --> E["5. Thiết lập Solver (EulerImplicit, SparseLDL, BlockGaussSeidel)"]
+    E --> F["6. Chạy mô phỏng (Animation Loop, Cập nhật lực & biến dạng)"]
+    F --> G["7. Xuất & Trực quan hóa (OglModel .stl, BarycentricMapping)"]
 ```
 
 
