@@ -15,7 +15,10 @@ Dự án sử dụng:
 ## 3. Hình ảnh và video kết quả
 <img width="1904" height="1062" alt="image" src="https://github.com/user-attachments/assets/dec1e5d0-7452-496d-81d1-971acd12181e" />
 
-https://github.com/user-attachments/assets/aed9fb82-fb4a-4477-a6bd-912dc0b73435
+<p align="center">
+**  https://github.com/user-attachments/assets/aed9fb82-fb4a-4477-a6bd-912dc0b73435 **  <br>
+  <em>Video mô phỏng quá trình co duỗi của ngón tay mềm</em>
+</p>
 
 ## 4. Phiên bản phần mềm và thư viện
 - **Python**: 3.12.1
