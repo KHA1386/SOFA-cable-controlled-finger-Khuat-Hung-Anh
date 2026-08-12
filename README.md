@@ -12,9 +12,7 @@ Dự án sử dụng:
 - **SoftRobots Plugin**: Plugin mở rộng cho SOFA hỗ trợ mô phỏng các cấu trúc robot mềm và các bộ truyền động
   
   
-## 3. Hình ảnh và video kết quả
-<img width="1904" height="1062" alt="image" src="https://github.com/user-attachments/assets/dec1e5d0-7452-496d-81d1-971acd12181e" />
-
+## 3. Video kết quả
 
 https://github.com/user-attachments/assets/37897040-7d10-462d-ba82-9568ce32247e
 <p align="center">
