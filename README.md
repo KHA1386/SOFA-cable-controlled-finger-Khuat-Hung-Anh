@@ -97,7 +97,8 @@ flowchart TD
     D --> E[Tạo Node 'cable': Khai báo tọa độ cáp, gán CableConstraint & BarycentricMapping]
     E --> F[Gắn FingerControllerTime vào nút cáp]
     F --> G[Bộ xử lý Controller tính độ kéo cáp theo hàm Sin & SOFA Solver tính biến dạng, cập nhật 3D]
-    G --> H([Kết thúc bước / Lặp lại])
+    G --> H[Kết thúc bước]
+    H --> G[Lặp lại]
 ```
 
 
