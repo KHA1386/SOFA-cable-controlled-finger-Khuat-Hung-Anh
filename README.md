@@ -67,24 +67,26 @@ Dự án được tổ chức bao gồm các file cấu hình kịch bản mô p
 └── FingerControllerTime.py     # Bộ điều khiển co/duỗi cáp tự động theo thời gian
 ```
 ### main_scene.py:
-* Chứa hàm createScene(rootNode) để xây dựng cây phân cấp SOFA (Scene Graph).
+- Chứa hàm createScene(rootNode) để xây dựng cây phân cấp SOFA (Scene Graph).
 
-* Load các plugin SOFA cần thiết (SoftRobots, SofaPython3, các bộ giải Solver).
+- Load các plugin SOFA cần thiết (SoftRobots, SofaPython3, các bộ giải Solver).
 
-* Khởi tạo mô hình động lực học ngón tay mềm (FEM, vật liệu đàn hồi Elasticity, điều kiện biên cố định BoxROI).
+- Khởi tạo mô hình động lực học ngón tay mềm (FEM, vật liệu đàn hồi Elasticity, điều kiện biên cố định BoxROI).
 
-* Thiết lập actuator cáp kéo (CableConstraint) và ánh xạ tọa độ (BarycentricMapping).
+- Thiết lập actuator cáp kéo (CableConstraint) và ánh xạ tọa độ (BarycentricMapping).
 
-* Tích hợp bộ điều khiển FingerControllerTime vào nút cáp.
+- Tích hợp bộ điều khiển FingerControllerTime vào nút cáp.
 
 ### FingerControllerTime.py:
-*Lớp FingerControllerTime kế thừa từ Sofa.Core.Controller.
+- Lớp FingerControllerTime kế thừa từ Sofa.Core.Controller.
 
-*Lắng nghe sự kiện theo bước thời gian mô phỏng (onAnimateBeginEvent).
+- Lắng nghe sự kiện theo bước thời gian mô phỏng (onAnimateBeginEvent).
 
-*Tính toán và cập nhật giá trị độ co dãn của cáp (value) theo hàm sóng Sin biến thiên êm dịu.
+- Tính toán và cập nhật giá trị độ co dãn của cáp (value) theo hàm sóng Sin biến thiên êm dịu.
 
 ### mesh/:
-*Lưu trữ các định dạng file hình học 3D phục vụ tính toán phần tử hữu hạn (.vtk) và hiển thị đồ họa (.stl).
+- Lưu trữ các định dạng file hình học 3D phục vụ tính toán phần tử hữu hạn (.vtk) và hiển thị đồ họa (.stl).
+
+
 
 
