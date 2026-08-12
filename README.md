@@ -55,4 +55,16 @@ Dự án sử dụng:
   <em>Hình 3: Cách chạy chương trình</em>
 </p>
 
+## 7. Cấu trúc Source Code
+
+Dự án được tổ chức bao gồm các file cấu hình kịch bản mô phỏng, bộ điều khiển (Controller), và dữ liệu hình học/lưới (Mesh) như sau:
+
+```text
+├── mesh/
+│   ├── finger.vtk              # File lưới phần tử hữu hạn (Tetrahedral Mesh) dùng cho FEM
+│   └── finger.stl              # File bề mặt 3D dùng cho hiển thị giao diện (Visualization)
+├── main_scene.py               # File chính tạo kịch bản mô phỏng (Scene Setup)
+├── FingerControllerTime.py     # Bộ điều khiển co/duỗi cáp tự động theo thời gian
+└── README.md                   # Tài liệu hướng dẫn dự án
+
 
