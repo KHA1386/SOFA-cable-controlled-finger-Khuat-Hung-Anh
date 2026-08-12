@@ -120,7 +120,7 @@ Dưới đây là bảng tổng hợp các tham số hệ thống trong chương
 
 Khảo sát ảnh hưởng của **Độ cứng vật liệu (`youngModulus`)** đến khả năng biến dạng và góc uốn của ngón tay mềm khi giữ nguyên hành trình kéo cáp tối đa ($25\text{ mm}$).
 
-Thực hiện chạy mô phỏng với các giá trị độ cứng khác nhau (`youngModulus`) tại component `TetrahedronFEMForceField`:
+Thực hiện chạy mô phỏng với các giá trị độ cứng khác nhau (`youngModulus`):
 
 ### Bảng kết quả khảo sát thực nghiệm
 
