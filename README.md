@@ -89,8 +89,23 @@ Dự án được tổ chức bao gồm các file cấu hình kịch bản mô p
 
 ## 8. Flowchart mô phỏng
 
-![Flowchart mô phỏng](images/flowchart.png)
-
+```mermaid
+flowchart TD
+    A([Bắt đầu mô phỏng]) --> B[Khởi tạo RootNode & Load các Plugin SOFA]
+    B --> C[Thiết lập trọng lực g và bước thời gian dt]
+    C --> D[Tạo Node 'finger': Load file .vtk, gán vật liệu FEM & Cố định gốc BoxROI]
+    D --> E[Tạo Node 'cable': Khai báo tọa độ cáp, gán CableConstraint & BarycentricMapping]
+    E --> F[Gắn FingerControllerTime vào nút cáp]
+    
+    F --> G{Bắt đầu vòng lặp thời gian: dt}
+    G --> H[Sự kiện: onAnimateBeginEvent]
+    H --> I[Lấy thời gian t từ RootNode]
+    I --> J["Tính độ kéo cáp: displacement = f(sin(t))"]
+    J --> K[Cập nhật value cho aCableActuator]
+    K --> L[Bộ giải Solver tính toán biến dạng ngón tay]
+    L --> M[Cập nhật hiển thị OglModel trên giao diện 3D]
+    M --> G
+```
 
 
 
