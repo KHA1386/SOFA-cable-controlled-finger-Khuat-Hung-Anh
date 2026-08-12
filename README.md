@@ -22,7 +22,7 @@ Dự án sử dụng:
 - **Plugin SOFA bắt buộc**:
   - `SoftRobots` (Plugin mô phỏng robot mềm và cơ cấu dây cáp)
   - `SofaPython3` (Plugin chạy Python 3 trong SOFA)
-- **Thư viện phụ thuộc (Python & Module)**:
+- **Thư viện phụ thuộc (Python và Module)**:
   - `Sofa.Core`, `Sofa.constants` (Thư viện Python có sẵn trong SofaPython3)
   - `os` (Thư viện chuẩn có sẵn của Python)
  
@@ -91,10 +91,10 @@ Dự án được tổ chức bao gồm các file cấu hình kịch bản mô p
 
 ```mermaid
 flowchart TD
-    A([Bắt đầu mô phỏng]) --> B[Khởi tạo RootNode & Load các Plugin SOFA]
+    A([Bắt đầu mô phỏng]) --> B[Khởi tạo RootNode và Load các Plugin SOFA]
     B --> C[Thiết lập trọng lực g và bước thời gian dt]
-    C --> D[Tạo Node 'finger': Load file .vtk, gán vật liệu FEM & Cố định gốc BoxROI]
-    D --> E[Tạo Node 'cable': Khai báo tọa độ cáp, gán CableConstraint & BarycentricMapping]
+    C --> D[Tạo Node 'finger': Load file .vtk, gán vật liệu FEM và Cố định gốc BoxROI]
+    D --> E[Tạo Node 'cable': Khai báo tọa độ cáp, gán CableConstraint và BarycentricMapping]
     E --> F[Gắn FingerControllerTime vào nút cáp]
     
     F --> G{Bắt đầu vòng lặp thời gian: dt}
