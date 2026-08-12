@@ -55,7 +55,7 @@ Dự án sử dụng:
   <em>Hình 3: Cách chạy chương trình</em>
 </p>
 
-## 7. Cấu trúc Source Code
+## 7. Cấu trúc Source Code (file source code: Finger.py và FingerControllerTime.py)
 
 Dự án được tổ chức bao gồm các file cấu hình kịch bản mô phỏng, bộ điều khiển (Controller), và dữ liệu hình học/lưới (Mesh) như sau:
 
