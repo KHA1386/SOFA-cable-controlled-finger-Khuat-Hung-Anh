@@ -101,6 +101,38 @@ flowchart TD
     E --> F["6. Chạy mô phỏng (Animation Loop, Cập nhật lực & biến dạng)"]
     F --> G["7. Xuất & Trực quan hóa (OglModel .stl, BarycentricMapping)"]
 ```
+## 9. Các tham số chính
+
+Dưới đây là bảng tổng hợp các tham số hệ thống trong chương trình mô phỏng
+
+| Tham số | Dòng Code / Component | Giá trị mặc định | Đơn vị | Ý nghĩa / Vai trò |
+| :--- | :--- | :--- | :--- | :--- |
+| **`youngModulus`** | `TetrahedronFEMForceField` | **600** | kPa | **Độ cứng vật liệu ngón tay (Tham số khảo sát)** |
+| `poissonRatio` | `TetrahedronFEMForceField` | 0.45 | - | Hệ số Poisson của vật liệu silicone/cao su |
+| `totalMass` | `UniformMass` | 0.075 | kg | Tổng khối lượng của ngón tay mềm |
+| `maxDisplacement`| `FingerControllerTime` | 25.0 | mm | Độ kéo cáp tối đa của Actuator |
+| `gravity` | `rootNode.gravity` | [0, -9810, 0] | $\text{mm/s}^2$ | Gia tốc trọng trường theo hướng $-Y$ |
+| `dt` | `rootNode.dt` | 0.01 | s | Bước thời gian tính toán mô phỏng |
+
+---
+
+## 10. Kết quả khảo sát tham số (Khảo sát Độ cứng $E$)
+
+Khảo sát ảnh hưởng của **Độ cứng vật liệu (`youngModulus`)** đến khả năng biến dạng và góc uốn của ngón tay mềm khi giữ nguyên hành trình kéo cáp tối đa ($25\text{ mm}$).
+
+Thực hiện chạy mô phỏng với các giá trị độ cứng khác nhau (`youngModulus`) tại component `TetrahedronFEMForceField`:
+
+### Bảng kết quả khảo sát thực nghiệm
+
+| STT | Giá trị Code (`youngModulus`) | Độ cứng quy đổi | Trạng thái vật liệu | Đặc điểm biến dạng quan sát được | Đánh giá mức độ uốn cong |
+| :---: | :---: | :---: | :--- | :--- | :---: |
+| **1** | **`150`** | $150\text{ kPa}$ | Rất mềm | Thân ngón tay uốn gập sâu nhất, các đốt uốn cong rõ rệt | **Rất lớn ($\approx 65^\circ$)** |
+| **2** | **`300`** | $300\text{ kPa}$ | Mềm vừa | Ngón tay uốn cong vừa phải, duy trì được dạng hình học | **Trung bình ($\approx 40^\circ$)** |
+| **3** | **`600`** | $600\text{ kPa}$ | Mặc định (Cứng) | Ngón tay chỉ hơi uốn nhẹ, khả năng biến dạng cản trở nhiều | **Nhỏ ($\approx 15^\circ$)** |
+| **4** | **`900 - 1000`** | $900 - 1000\text{ kPa}$ | Rất cứng | Hình dạng biến dạng gần như tương tự mức $600$, không có thêm sự khác biệt đáng kể | **Rất nhỏ / Tiệm cận bão hòa ($\approx 10^\circ$)** |
+
+---
+
 
 
 
