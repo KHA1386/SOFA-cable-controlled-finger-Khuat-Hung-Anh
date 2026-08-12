@@ -84,8 +84,12 @@ Dự án được tổ chức bao gồm các file cấu hình kịch bản mô p
 
 - Tính toán và cập nhật giá trị độ co dãn của cáp (value) theo hàm sóng Sin biến thiên êm dịu.
 
-### mesh/:
+### mesh:
 - Lưu trữ các định dạng file hình học 3D phục vụ tính toán phần tử hữu hạn (.vtk) và hiển thị đồ họa (.stl).
+
+## 8. Flowchart mô phỏng
+
+![Flowchart mô phỏng](images/flowchart.png)
 
 
 
