@@ -36,7 +36,7 @@ https://github.com/user-attachments/assets/37897040-7d10-462d-ba82-9568ce32247e
 
 ## 6. Lệnh chạy chương trình
 1. Khởi động phần mềm **SOFA GUI** (hoặc gõ `runSofa` trong cửa sổ cmd).
-2. Trên thanh menu, chọn **File** $\rightarrow$ **Open Simulation**.
+2. Trên thanh menu, chọn **File** $\rightarrow$ **Open Simulation** $\rightarrow$ **Finger.py**
 3. Tìm và chọn file: Finger.py (hoặc Finger nếu máy không hiển thị đuôi file
 4. Nhấn nút **Animate** (biểu tượng hình tam giác ở phía trên chính giữa màn hình) để bắt đầu tính toán mô phỏng.
    
@@ -128,10 +128,31 @@ Thực hiện chạy mô phỏng với các giá trị độ cứng khác nhau (
 | :---: | :---: | :---: | :--- | :--- | :---: |
 | **1** | **`150`** | $150\text{ kPa}$ | Rất mềm | Thân ngón tay uốn gập sâu nhất, các đốt uốn cong rõ rệt | **Rất lớn ($\approx 65^\circ$)** |
 | **2** | **`300`** | $300\text{ kPa}$ | Mềm vừa | Ngón tay uốn cong vừa phải, duy trì được dạng hình học | **Trung bình ($\approx 40^\circ$)** |
-| **3** | **`600`** | $600\text{ kPa}$ | Mặc định (Cứng) | Ngón tay chỉ hơi uốn nhẹ, khả năng biến dạng cản trở nhiều | **Nhỏ ($\approx 15^\circ$)** |
+| **3** | **`600`** | $600\text{ kPa}$ | Cứng | Ngón tay chỉ hơi uốn nhẹ, khả năng biến dạng cản trở nhiều | **Nhỏ ($\approx 15^\circ$)** |
 | **4** | **`900 - 1000`** | $900 - 1000\text{ kPa}$ | Rất cứng | Hình dạng biến dạng gần như tương tự mức $600$, không có thêm sự khác biệt đáng kể | **Rất nhỏ / Tiệm cận bão hòa ($\approx 10^\circ$)** |
-
 ---
+
+## 11. Hạn chế của mô hình
+
+Dù mô hình mô phỏng đã thể hiện đúng động học co/duỗi của ngón tay mềm bằng cáp kéo, hệ thống vẫn tồn tại một số hạn chế so với thực tế kỹ thuật:
+
+1. **Giới hạn của mô hình vật liệu đàn hồi tuyến tính (Linear Elasticity):**
+   * Trong code sử dụng `TetrahedronFEMForceField` dựa trên định luật Hooke ($\sigma = E \cdot \epsilon$). Mô hình này chỉ chính xác với biến dạng nhỏ. 
+   * Trên thực tế, ngón tay mềm có thể được làm từ cao su/silicone trải qua biến dạng lớn và có tính chất **siêu đàn hồi**, đòi hỏi các mô hình phi tuyến tính để phản ánh đúng ứng suất thực tế.
+
+2. **Bỏ qua ma sát và độ dãn của dây cáp:**
+   * Thành phần `CableConstraint` giả định cáp chuyển động lý tưởng trong lòng ngón tay. 
+   * Mô hình chưa tính đến **lực ma sát** giữa dây cáp và vách đường ống dẫn, cũng như **sự biến dạng đàn hồi** hay **độ biến dạng mỏi** dây cáp khi chịu tải trong thời gian dài
+
+3. **Chưa tích hợp cơ chế tự va chạm (Self-Collision) và va chạm bên ngoài:**
+   * Mô phỏng hiện tại chưa bổ sung các thành phần phát hiện va chạm, chưa thể mô phỏng cách ngón tay tương tác với các vật khác hoặc với mô người
+   * Khi uốn gập sâu ở mức độ cứng thấp (`youngModulus = 150`), các vách đốt ngón tay có thể bị đâm xuyên qua nhau (Self-intersection) thay vì va chạm và chèn ép lẫn nhau như thực tế.
+
+4. **Điều kiện biên cố định lý tưởng:**
+   * Khâu cố định gốc ngón tay sử dụng `BoxROI` kết hợp `RestShapeSpringsForceField` với độ cứng lò xo lớn ($10^{12}$). Đây là giải pháp xấp xỉ toán học, chưa phản ánh đúng sự biến dạng cục bộ tại vị trí ngàm kẹp cơ khí ngoài thực tế.
+
+5. **Chưa hiệu chuẩn tham số dập dao động (Damping Parameters):**
+   * Các hệ số cản Rayleigh (`rayleighMass = 0.1`, `rayleighStiffness = 0.1`) được chọn theo kinh nghiệm mô phỏng, chưa qua thực nghiệm đo đạc thực tế để phản ánh đúng quán tính và độ suy giảm dao động của vật liệu silicone.
 
 
 
