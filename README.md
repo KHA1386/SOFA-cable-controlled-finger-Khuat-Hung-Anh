@@ -132,32 +132,33 @@ Thực hiện chạy mô phỏng với các giá trị độ cứng khác nhau (
 | **4** | **`900 - 1000`** | $900 - 1000\text{ kPa}$ | Rất cứng | Hình dạng biến dạng gần như tương tự mức $600$, không có thêm sự khác biệt đáng kể | **Rất nhỏ / Tiệm cận bão hòa ($\approx 10^\circ$)** |
 ---
 
-<p align="center">
+<<p align="center">
   <b>Kết quả mô phỏng độ cứng E (youngModulus)</b>
 </p>
 
 <table align="center">
   <tr>
     <td align="center" width="50%">
-      <video src="https://github.com/user-attachments/assets/6473cc73-b2b0-40f2-b0e4-298fee2dd11c" autoplay loop muted playsinline width="100%"></video><br>
+      <img src="https://github.com/user-attachments/assets/7dde2717-1b89-43b0-bc5d-5db923ed4ef0" width="100%" alt="150kPa" /><br>
       <b>(a) E = 150 kPa</b> (Rất mềm)
     </td>
     <td align="center" width="50%">
-      <video src="https://github.com/user-attachments/assets/dc64cd68-7de3-4a81-81f8-a8b5a74c900b" autoplay loop muted playsinline width="100%"></video><br>
+      <img src="https://github.com/user-attachments/assets/9dfd0055-727e-447e-a931-a28f3b75f256" width="100%" alt="300kPa" /><br>
       <b>(b) E = 300 kPa</b> (Mềm vừa)
     </td>
   </tr>
   <tr>
     <td align="center" width="50%">
-      <video src="https://github.com/user-attachments/assets/71050812-f334-4586-9e4e-7216b0a2981a" autoplay loop muted playsinline width="100%"></video><br>
+      <img src="https://github.com/user-attachments/assets/3aa1477b-043d-4d74-97ea-7ab7323b74b6" width="100%" alt="600kPa" /><br>
       <b>(c) E = 600 kPa</b> (Cứng)
     </td>
     <td align="center" width="50%">
-      <video src="https://github.com/user-attachments/assets/a2c038a7-bbf6-4169-95f9-4c6bd7155358" autoplay loop muted playsinline width="100%"></video><br>
+      <img src="https://github.com/user-attachments/assets/2a2cb21e-9527-4c91-9b11-abf9646b9531" width="100%" alt="900kPa" /><br>
       <b>(d) E = 900–1000 kPa</b> (Rất cứng)
     </td>
   </tr>
 </table>
+
 
 
 ## 11. Hạn chế của mô hình
