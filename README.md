@@ -31,8 +31,40 @@ https://github.com/user-attachments/assets/37897040-7d10-462d-ba82-9568ce32247e
  
 
 ## 5. Hướng dẫn cài đặt
-1. **Clone repository về máy:**
-để sau
+Để cài đặt và sử dụng SOFA Framework cùng với **SofaPython3** trên Windows, vui lòng làm theo các bước hướng dẫn bên dưới.
+---
+
+### 1. Tải về các công cụ cần thiết
+
+* **SOFA Framework (Bản nhị phân):** Truy cập [Trang chủ SOFA Downloads](https://www.sofa-framework.org/download/) để tải bản cài đặt SOFA mới nhất dành cho Windows (đã tích hợp sẵn plugin `SofaPython3`).
+* **Python:** Tải và cài đặt [Python 3.12 (64-bit)](https://www.python.org/downloads/release/python-3120/) (khuyến nghị phiên bản khớp chính xác với bản nhị phân của SOFA).
+*  **VScode** (không bắt buộc) Nên cài đặt để việc lập trình diễn ra tiện lợi hơn: [Visual Studio Code](https://code.visualstudio.com/)
+
+---
+
+### 2. Thiết lập Biến môi trường (Environment Variables)
+
+> **⚠️ LƯU Ý CỰC KỲ QUAN TRỌNG:** Đây là bước dễ gặp lỗi nhất khiến Python hoặc VSCode không nhận diện được thư viện SOFA. Hãy kiểm tra chính xác các đường dẫn sau khi thiết lập!
+
+Mở **System Properties** -> **Environment Variables** -> **System variables** -> **New** trên Windows và cấu hình các biến sau:
+
+1. **`SOFA_ROOT`**: Đặt đường dẫn tới thư mục cài đặt SOFA của bạn (ví dụ: `C:\SOFA\v23.12.00`).
+2. **`PYTHON_ROOT`**: Đặt đường dẫn tới thư mục cài đặt Python 3.12 (ví dụ: `C:\Users\<Username>\AppData\Local\Programs\Python\Python312`).
+3. **`PYTHONPATH`**: Thêm đường dẫn:
+   ```text
+   %SOFA_ROOT%\plugins\SofaPython3\lib\python3\site-packages
+   ```
+<img width="664" height="79" alt="image" src="https://github.com/user-attachments/assets/f2df322e-5378-4230-ab82-88256722452c" />
+
+4. **`Path`**: thêm vào cuối:
+   <br>
+   *%PYTHON_ROOT%*
+   <br>
+   *%PYTHON_ROOT%\DLLs*
+    <br>
+   *%PYTHON_ROOT%\Lib*
+    <br>
+   *%SOFA_ROOT%\bin*
 
 ## 6. Lệnh chạy chương trình
 1. Khởi động phần mềm **SOFA GUI** (hoặc gõ `runSofa` trong cửa sổ cmd).
