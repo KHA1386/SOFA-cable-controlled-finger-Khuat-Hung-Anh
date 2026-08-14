@@ -95,13 +95,13 @@ Mở **System Properties** -> **Environment Variables** -> **System variables** 
 Dự án được tổ chức bao gồm các file cấu hình kịch bản mô phỏng, bộ điều khiển (Controller), và dữ liệu hình học/lưới (Mesh) như sau:
 
 ```text
-├── mesh/
-│   ├── finger.vtk              # File lưới phần tử hữu hạn (Tetrahedral Mesh) dùng cho FEM
-│   └── finger.stl              # File bề mặt 3D dùng cho hiển thị giao diện (Visualization)
-├── main_scene.py               # File chính tạo kịch bản mô phỏng (Scene Setup)
-└── FingerControllerTime.py     # Bộ điều khiển co/duỗi cáp tự động theo thời gian
+├── mesh/                       # Thư mục chứa các file dữ liệu hình học 3D
+│   ├── finger.vtk              # File lưới phần tử hữu hạn (dùng cho tính toán FEM)
+│   └── finger.stl              # File mô hình 3D (dùng cho hiển thị đồ họa)
+├── Finger.py                   # File Python thiết lập kịch bản mô phỏng (gọi 2 file trong mesh/)
+└── FingerControllerTime.py     # File Python chứa bộ điều khiển co/duỗi dây cáp
 ```
-### main_scene.py:
+### Finger.py:
 - Chứa hàm createScene(rootNode) để xây dựng cây phân cấp SOFA (Scene Graph).
 
 - Load các plugin SOFA cần thiết (SoftRobots, SofaPython3, các bộ giải Solver).
