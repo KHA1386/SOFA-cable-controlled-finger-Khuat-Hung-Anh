@@ -130,7 +130,7 @@ flowchart TD
     B --> C["3. Thiết lập điều kiện biên (BoxROI, RestShapeSprings)"]
     C --> D["4. Khai báo Actuation & tải ngoài (CableConstraint, Controller Sin)"]
     D --> E["5. Thiết lập Solver (EulerImplicit, SparseLDL, BlockGaussSeidel)"]
-    E --> F["6. Chạy mô phỏng (Animation Loop, Cập nhật lực & biến dạng)"]
+    E --> F["6. Chạy mô phỏng (Animation Loop, Cập nhật lực và biến dạng)"]
     F --> G["7. Xuất & Trực quan hóa (OglModel .stl, BarycentricMapping)"]
 ```
 ## 9. Các tham số chính
