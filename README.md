@@ -4,7 +4,6 @@
 * **Mục tiêu tổng quát:** Xây dựng mô hình mô phỏng chuyển động của ngón tay softrobot được điều khiển bằng cơ cấu dây kéo trong phần mềm SOFA framework.
 * **Mục tiêu cụ thể:**
   * **Khảo sát thuộc tính vật liệu:** Đánh giá ảnh hưởng của độ cứng vật liệu (Modun Young $E$) và hệ số Poisson đến khả năng biến dạng, góc uốn và độ hồi phục của ngón tay.
-  * **Khảo sát thông số điều khiển:** Mô phỏng sự thay đổi trạng thái (quỹ đạo chuyển động, lực kẹp đầu ngón) theo các mức độ kéo dây khác nhau (độ dịch chuyển dây hoặc lực kéo dây).
 
 ## 2. Giới thiệu ngắn gọn về phần mềm
 Dự án sử dụng:
