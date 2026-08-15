@@ -31,9 +31,10 @@ https://github.com/user-attachments/assets/37897040-7d10-462d-ba82-9568ce32247e
  
 
 ## 5. Hướng dẫn cài đặt
-Để cài đặt và sử dụng SOFA Framework cùng với **SofaPython3** trên Windows, vui lòng làm theo các bước hướng dẫn bên dưới.
+Để cài đặt và sử dụng SOFA Framework cùng với **SofaPython3** trên Windows, hãy truy cập link sau và làm theo hướng dẫn: https://sofapython3.readthedocs.io/en/latest/content/Installation.html#using-python3
 ---
-
+Dưới đây là một vài lưu ý quan trọng khi tải cần lưu ý:
+---
 ### 1. Tải về các công cụ cần thiết
 
 * **SOFA Framework (Bản nhị phân):** Truy cập [Trang chủ SOFA Downloads](https://www.sofa-framework.org/download/) để tải bản cài đặt SOFA mới nhất dành cho Windows (đã tích hợp sẵn plugin `SofaPython3`).
